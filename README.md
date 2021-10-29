@@ -26,9 +26,9 @@
 
 <!-- Project Links -->
 <p align="center">
-    <a href="https://github.com/romankolivashko/ParksAPI.git"><big>Project Docs</big></a> ·
-    <a href="https://github.com/romankolivashko/ParksAPI.git/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/romankolivashko/ParksAPI.git/issues"><big>Request Feature</big></a>
+    <a href="https://github.com/romankolivashko/ParksAPI"><big>Project Docs</big></a> ·
+    <a href="https://github.com/romankolivashko/ParksAPI/issues"><big>Report Bug</big></a> ·
+    <a href="https://github.com/romankolivashko/ParksAPI/issues"><big>Request Feature</big></a>
 </p>
 
 ------------------------------
