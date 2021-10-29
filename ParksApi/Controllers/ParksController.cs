@@ -26,7 +26,7 @@ namespace ParksApi.Controllers
       _db = db;
     }
 
-    // GET: api/Parks
+    // GET: api/parks
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string description, string state, string area, string visitors, string yearEstablished)
     {
@@ -66,7 +66,7 @@ namespace ParksApi.Controllers
       return await query.ToListAsync();
     }
 
-    // GET: api/Parks/5
+    // GET: api/parks/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Park>> GetPark(int id)
     {
@@ -80,7 +80,7 @@ namespace ParksApi.Controllers
         return park;
     }
 
-    // PUT: api/Parks/5
+    // PUT: api/parks/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Park park)
@@ -111,7 +111,7 @@ namespace ParksApi.Controllers
       return NoContent();
     }
 
-    // POST: api/Parks
+    // POST: api/parks
     [HttpPost]
     public async Task<ActionResult<Park>> Post(Park park)
     {
@@ -121,7 +121,7 @@ namespace ParksApi.Controllers
       return CreatedAtAction(nameof(GetPark), new { id = park.ParkId }, park);
     }
 
-    // DELETE: api/Parks/5
+    // DELETE: api/parks/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePark(int id)
     {

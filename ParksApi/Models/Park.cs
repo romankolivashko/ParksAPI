@@ -11,8 +11,9 @@ namespace ParksApi.Models
         public string Description { get; set; }
         [Required]
         public string State { get; set; }
+        public string StateId { get; set; }
         public string Area { get; set; }
-        public string Visitors { get; set; }
-        public string YearEstablished { get; set; }
+        public int Visitors { get; set; }
+        public int YearEstablished { get; set; }
     }
 }
