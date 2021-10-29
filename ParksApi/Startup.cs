@@ -89,7 +89,7 @@ namespace ParksApi
             app.UseSwaggerUI(options => 
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
-                options.RoutePrefix = "";
+                //options.RoutePrefix = "";
             });
         }
     }
