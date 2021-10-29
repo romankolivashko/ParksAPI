@@ -196,7 +196,7 @@ visitors: 916932,
 yearEstablished: 1978
 }
 ```
-#### Versioning Example Query, here version 2 (ptortected version) is called
+#### Versioning Example Query, here version 2 (protected version) is called
 ```
 https://localhost:5000/api/parks/2?api-version=2.0
 ```
