@@ -54,11 +54,10 @@ namespace ParksApi
                 options.ResolveConflictingActions (apiDescriptions => apiDescriptions.First ());
             });
 
-                // services.AddApiVersioning(o => {
-                // o.ReportApiVersions = true;
-                // o.AssumeDefaultVersionWhenUnspecified = true;
-                // o.DefaultApiVersion = new ApiVersion(1, 0);
-                // });
+                services.AddApiVersioning(o => {
+                o.ReportApiVersions = true;
+                o.AssumeDefaultVersionWhenUnspecified = true;
+                });
 
             services.AddDbContext<ParksApiContext>(opt =>
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));

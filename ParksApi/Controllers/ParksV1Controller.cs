@@ -16,12 +16,12 @@ namespace ParksApi.Controllers
   [ApiVersion("1.0")]
   //[Route("api/[controller]")]
   [Route("api/parks")]
-  public class ParksController : ControllerBase
+  public class ParksV1Controller : ControllerBase
   {
     private readonly ParksApiContext _db;
 
     
-    public ParksController(ParksApiContext db)
+    public ParksV1Controller(ParksApiContext db)
     {
       _db = db;
     }

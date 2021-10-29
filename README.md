@@ -118,7 +118,7 @@ This API uses RESTful principles, version control, and has integrated version of
 
   #### Download
 
-  1) Navigate to the [Parks API repository here](https://github.com/romankolivashko/AirlineCodes).
+  1) Navigate to the [Parks API repository here](https://github.com/romankolivashko/ParksAPI).
   2) Click 'Clone or download' to reveal the HTTPS url ending with .git and the 'Download ZIP' option.
   3) Click 'Download ZIP' and unextract.
   4) Open by double clicking on any of the files to open in a text editor.
@@ -176,20 +176,47 @@ PUT /api/{component}/{id}
 DELETE /api/{component}/{id}
 ```
 
-#### Versioning Example Query
+#### Versioning Example Query, here version 1 is called
 ```
-https://localhost:5000/api/parks?api-version=1.0
+https://localhost:5000/api/parks/2?api-version=1.0
 ```
 
 #### Sample JSON Response
 ```
 {
-        "airportId": 2,
-        "name": "Portland International Airport",
-        "code": "PDX",
-        "city": "Portland, OR",
-        "biggestAirline": "Southwest Airlines"
+joinEntities: [ ],
+parkId: 2,
+name: "Badlands",
+description: "The Badlands are a collection of buttes, pinnacles, spires, and mixed-grass prairies. The White River Badlands contain the largest assemblage of known late Eocene and Oligocene mammal fossils. The wildlife includes bison, bighorn sheep, black-footed ferrets, and prairie dogs.",
+state: "South Dakota",
+area: "242,755.94 acres (982.4 km2)",
+visitors: 916932,
+yearEstablished: 1978
+}
+```
+#### Versioning Example Query, here version 2 (ptortected version) is called
+```
+https://localhost:5000/api/parks/2?api-version=2.0
+```
+
+#### Sample JSON Response
+```
+Api Key was not provided
+```
+Note: version 1.0 is set to be default, to be able to call version 2, make sure to create ApiKey object  in `appsettings.json` file, then use that key upon API call (Postman --> Authorisation --> Type: API Key --> Value: yourKey ), here is example of `appsetting.json` file with ApiKey.
+```
+{ 
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning",
+      "System": "Information",
+      "Microsoft": "Information"
     }
+  },
+  "AllowedHosts": "*",
+  "ApiKey": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+  ...
+}
 ```
 
 ..........................................................................................
@@ -259,19 +286,19 @@ yearEstablished: 1934
 If you have any feedback or concerns, please contact one of the contributors.
 
 <p>
-    <a href="https://github.com/romankolivashko/AirlineCodes/issues">Roman Kolivashko</a> ·
+    <a href="https://github.com/romankolivashko/ParksApi/issues">Roman Kolivashko</a> ·
 </p>
 
 ------------------------------
 
 ### ⚖️ License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2021 Roman Kolivashko and Brandon Eads. All Rights Reserved.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2021 Roman Kolivashko. All Rights Reserved.
 
 ```
 MIT License
 
-Copyright (c) 2021 Roman Kolivashko and Brandon Eads.
+Copyright (c) 2021 Roman Kolivashko.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
