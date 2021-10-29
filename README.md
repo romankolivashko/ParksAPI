@@ -205,7 +205,7 @@ https://localhost:5000/api/parks/2?api-version=2.0
 ```
 Api Key was not provided
 ```
-Note: version 1.0 is set to be default, to be able to call version 2, make sure to create ApiKey object  in `appsettings.json` file, then use that key upon API call (Postman --> Authorisation --> Type: API Key --> Value: yourKey ), here is example of `appsetting.json` file with ApiKey.
+Note: version 1.0 is set to be default. To be able to call version 2, make sure to create `ApiKey` object  in `appsettings.json` file, then use that key upon calling the API (Postman --> Authorisation --> Type: API Key --> Value: yourKey ), here is example of `appsetting.json` file with ApiKey.
 ```
 { 
   "Logging": {
@@ -224,7 +224,7 @@ Note: version 1.0 is set to be default, to be able to call version 2, make sure 
 ..........................................................................................
 
 ### US National Parks
-Access parks info from around the world.
+Access parks info by calling the API.
 
 #### Park HTTP Requests 
 ```
