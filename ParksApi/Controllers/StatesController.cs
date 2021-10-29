@@ -14,8 +14,8 @@ namespace ParksApi.Controllers
   //[ApiKey]
   [ApiController]
   [ApiVersion("1.0")]
-  //[Route("api/[controller]")]
-  [Route("api/states")]
+  [Route("api/[controller]")]
+  //[Route("api/states")]
   public class StatesController : ControllerBase
   {
     private readonly ParksApiContext _db;

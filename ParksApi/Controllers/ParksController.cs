@@ -54,12 +54,12 @@ namespace ParksApi.Controllers
 
       if (visitors != null)
       {
-        query = query.Where(entry => entry.Visitors.Contains(visitors));
+        query = query.Where(entry => entry.Visitors == Convert.ToInt32(visitors));
       }
 
       if (yearEstablished != null)
       {
-        query = query.Where(entry => entry.YearEstablished.Contains(yearEstablished));
+        query = query.Where(entry => entry.YearEstablished == Convert.ToInt32(yearEstablished));
       }
 
 
