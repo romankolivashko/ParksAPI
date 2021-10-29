@@ -40,8 +40,8 @@ namespace ParksApi
                 options.SwaggerDoc("v1",
                     new Microsoft.OpenApi.Models.OpenApiInfo
                     {
-                        Title = "Swagger Demo API",
-                        Description = "Demo API for showing Swagger",
+                        Title = "Parks API",
+                        Description = "Park API Swagger Documentation",
                         Version = "v1"
                     });
 
@@ -85,25 +85,12 @@ namespace ParksApi
 
             app.UseSwaggerUI(options => 
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Parks API");
                 options.RoutePrefix = "";
             });
         }
     }
 
-    // public class VersioningConventions : IApplicationModelConvention
-    // {   
-    //     public void Apply(ApplicationModel application)
-    //         {
-    //             foreach (var controller in application.Controllers)
-    //                 {
-    //                     //Check if route attribute is alredy definedvar hasRoute = controller.Selectors.Any(selector => selector.AttributeRouteModel != null);if (hasRoute){continue;}//Get the version as last part of namespacevar version = controller.ControllerType.Namespace.Split('.').LastOrDefault();controller.Selectors[0].AttributeRouteModel = new AttributeRouteModel()       
-    //                 {  
-    //                 Template = string.Format("api/{0}/{1}", version, controller.ControllerName);  
-    //             };  
-    //         }  
-    //     }  
-    // }  
 }
 
 
