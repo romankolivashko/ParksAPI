@@ -30,10 +30,8 @@ namespace ParksApi
             services.AddControllers(); 
             services.AddApiVersioning(x =>  
             {  
-                //x.DefaultApiVersion = new ApiVersion(1, 0);  
                 x.AssumeDefaultVersionWhenUnspecified = true;  
                 x.ReportApiVersions = true;  
-                //x.ApiVersionReader = new HeaderApiVersionReader("x-api-version");  
             });  
         
 
@@ -88,7 +86,7 @@ namespace ParksApi
             app.UseSwaggerUI(options => 
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
-                //options.RoutePrefix = "";
+                options.RoutePrefix = "";
             });
         }
     }

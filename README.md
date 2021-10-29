@@ -158,8 +158,10 @@ This API uses RESTful principles, version control, and has integrated version of
 Explore the API endpoints in Postman or a browser. You will not be able to utilize authentication in a browser.
 
 ### Using Swagger Documentation 
-To explore the ParksApi.Solution API with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger`
+To explore the ParksApi.Solution API with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `https://localhost:5000/`
 
+### Note:
+Swagger will redirect to `https://localhost:5000/index.html` providing API documentation
 
 
 ..........................................................................................
@@ -286,7 +288,7 @@ yearEstablished: 1934
 If you have any feedback or concerns, please contact one of the contributors.
 
 <p>
-    <a href="https://github.com/romankolivashko/ParksApi/issues">Roman Kolivashko</a> ·
+    <a href="https://github.com/romankolivashko/ParksApi/issues">Roman Kolivashko</a> 
 </p>
 
 ------------------------------
