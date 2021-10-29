@@ -28,29 +28,40 @@ namespace ParksApi.Controllers
 
     // GET: api/Parks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get(string code, string city, string name, string biggestAirline)
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string description, string state, string area, string visitors, string yearEstablished)
     {
       var query = _db.Parks.AsQueryable();
-
-      if (code != null)
-      {
-        query = query.Where(entry => entry.Code.Contains(code));
-      }
-
-      if (city != null)
-      {
-        query = query.Where(entry => entry.City == city);
-      }
 
       if (name != null)
       {
         query = query.Where(entry => entry.Name.Contains(name));
       }
 
-      if (biggestAirline !=null)
+      if (description != null)
       {
-        query = query.Where(entry => entry.BiggestAirline.Contains(biggestAirline));
+        query = query.Where(entry => entry.Description == description);
       }
+
+      if (state != null)
+      {
+        query = query.Where(entry => entry.State.Contains(state));
+      }
+
+      if (area != null)
+      {
+        query = query.Where(entry => entry.Area.Contains(area));
+      }
+
+      if (visitors != null)
+      {
+        query = query.Where(entry => entry.Visitors.Contains(visitors));
+      }
+
+      if (yearEstablished != null)
+      {
+        query = query.Where(entry => entry.YearEstablished.Contains(yearEstablished));
+      }
+
 
       return await query.ToListAsync();
     }
